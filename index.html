@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brackenbury Capital - Global Investment Partners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 24px;
+            color: #003366;
+            font-weight: 900;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600') center/cover;
+            transform: scale(1.1);
+            animation: parallax 20s ease infinite;
+        }
+        
+        @keyframes parallax {
+            0%, 100% { transform: scale(1.1) translateY(0); }
+            50% { transform: scale(1.1) translateY(-20px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 40px;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 120px 60px;
+            position: relative;
+        }
+        
+        .section-dark {
+            background: #0a0a0a;
+        }
+        
+        .section-teal {
+            background: #1a3a3a;
+        }
+        
+        .section-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+        
+        .section-text {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 700px;
+            opacity: 0.85;
+        }
+        
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+        
+        /* Image Container */
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Philosophy Section */
+        .philosophy {
+            text-align: center;
+        }
+        
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin-top: 80px;
+        }
+        
+        .philosophy-item h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .philosophy-item p {
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            margin-top: 60px;
+        }
+        
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px;
+            border-top: 1px solid #222;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 30px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            section {
+                padding: 80px 30px;
+            }
+            
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Brackenbury Capital</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1>Building enduring partnerships through disciplined investment</h1>
+            <p>Brackenbury Capital partners with exceptional businesses to create sustained value and long-term growth.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section-dark">
+        <div class="two-col">
+            <div>
+                <div class="section-label">Who We Are</div>
+                <h2 class="section-title">A trusted partner for sophisticated investors</h2>
+                <p class="section-text">
+                    Brackenbury Capital is a private equity and investment management firm dedicated to delivering exceptional risk-adjusted returns. We bring deep sector expertise, operational insight, and a long-term perspective to every investment.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800" alt="Modern office architecture">
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="section-teal">
+        <div class="two-col">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=800" alt="Business discussion">
+            </div>
+            <div>
+                <div class="section-label">Our Approach</div>
+                <h2 class="section-title">Disciplined, research-driven investment strategies</h2>
+                <p class="section-text">
+                    Our investment philosophy is grounded in rigorous fundamental analysis and deep due diligence. We seek to identify opportunities where we can leverage our expertise to drive operational improvements and strategic growth.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="section-dark philosophy">
+        <div class="section-label">Investment Philosophy</div>
+        <h2 class="section-title" style="margin: 0 auto;">Principles that guide our decisions</h2>
+        <div class="philosophy-grid">
+            <div class="philosophy-item">
+                <h3>Long-Term Focus</h3>
+                <p>We invest with a multi-year horizon, allowing businesses the time and resources to achieve sustainable growth and realize their full potential.</p>
+            </div>
+            <div class="philosophy-item">
+                <h3>Operational Excellence</h3>
+                <p>We work closely with management teams to enhance operational efficiency, improve margins, and build competitive advantages that endure.</p>
+            </div>
+            <div class="philosophy-item">
+                <h3>Risk Management</h3>
+                <p>Thoughtful capital allocation and comprehensive risk assessment are at the core of our investment process, protecting and growing capital.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-teal">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Get in touch</h2>
+        <div class="contact-info">
+            <p>16 Taeping Street</p>
+            <p>London</p>
+            <p>E14 9UN</p>
+            <p>United Kingdom</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Brackenbury Capital. All rights reserved.</p>
+        <p style="margin-top: 20px; font-size: 12px;">
+            Brackenbury Capital and Brackenbury Capital Global Investors are not authorised or regulated in the United Kingdom by the 
+            Financial Conduct Authority ("FCA") under the Financial Services and Markets Act 2000.
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
