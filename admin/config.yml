@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: EmmyBeckmann/brackenburycapital-new-design
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "Hero Headline", name: "hero_headline", widget: "string", default: "Building enduring partnerships through disciplined investment"}
+          - {label: "Hero Subtext", name: "hero_subtext", widget: "text", default: "Brackenbury Capital partners with exceptional businesses to create sustained value and long-term growth."}
+          - {label: "About Title", name: "about_title", widget: "string", default: "A trusted partner for sophisticated investors"}
+          - {label: "About Description", name: "about_description", widget: "text", default: "Brackenbury Capital is a private equity and investment management firm dedicated to delivering exceptional risk-adjusted returns. We bring deep sector expertise, operational insight, and a long-term perspective to every investment."}
+          - {label: "Approach Title", name: "approach_title", widget: "string", default: "Disciplined, research-driven investment strategies"}
+          - {label: "Approach Description", name: "approach_description", widget: "text"}
+          - {label: "Philosophy Principle 1 Title", name: "philosophy1_title", widget: "string"}
+          - {label: "Philosophy Principle 1 Description", name: "philosophy1_desc", widget: "text"}
+          - {label: "Philosophy Principle 2 Title", name: "philosophy2_title", widget: "string"}
+          - {label: "Philosophy Principle 2 Description", name: "philosophy2_desc", widget: "text"}
+          - {label: "Philosophy Principle 3 Title", name: "philosophy3_title", widget: "string"}
+          - {label: "Philosophy Principle 3 Description", name: "philosophy3_desc", widget: "text"}
+          - {label: "Contact Address Line 1", name: "contact_address1", widget: "string"}
+          - {label: "Contact Address Line 2", name: "contact_address2", widget: "string"}
+          - {label: "Contact Address Line 3", name: "contact_address3", widget: "string"}
+          - {label: "Contact Address Line 4", name: "contact_address4", widget: "string"}
