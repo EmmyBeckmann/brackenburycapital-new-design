@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: EmmyBeckmann/brackenburycapital-new-design
+  name: git-gateway
   branch: main
 
 media_folder: "images"
@@ -14,10 +13,10 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-          - {label: "Hero Headline", name: "hero_headline", widget: "string", default: "Building enduring partnerships through disciplined investment"}
-          - {label: "Hero Subtext", name: "hero_subtext", widget: "text", default: "Brackenbury Capital partners with exceptional businesses to create sustained value and long-term growth."}
+          - {label: "Hero Headline", name: "hero_headline", widget: "string", default: "Building enduring partnerships through disciplined investing"}
+          - {label: "Hero Subtext", name: "hero_subtext", widget: "text", default: "Brackenbury Capital partners with exceptional businesses"}
           - {label: "About Title", name: "about_title", widget: "string", default: "A trusted partner for sophisticated investors"}
-          - {label: "About Description", name: "about_description", widget: "text", default: "Brackenbury Capital is a private equity and investment management firm dedicated to delivering exceptional risk-adjusted returns. We bring deep sector expertise, operational insight, and a long-term perspective to every investment."}
+          - {label: "About Description", name: "about_description", widget: "text", default: "Brackenbury Capital is a private equity and investment firm"}
           - {label: "Approach Title", name: "approach_title", widget: "string", default: "Disciplined, research-driven investment strategies"}
           - {label: "Approach Description", name: "approach_description", widget: "text"}
           - {label: "Philosophy Principle 1 Title", name: "philosophy1_title", widget: "string"}
