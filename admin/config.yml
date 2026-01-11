@@ -1,6 +1,6 @@
 backend:
-name: github
-  repo: EmmyBeckmann/brackenburycapital-new-desig
+  name: github
+  repo: EmmyBeckmann/brackenburycapital-new-design
   branch: main
 
 media_folder: "images"
