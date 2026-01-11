@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: git-github
   branch: main
+  repo: EmmyBeckmann/brackenburycapital-new-design
 
 media_folder: "images"
 public_folder: "/images"
